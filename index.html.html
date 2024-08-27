@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>神话人物与香水测试</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f8f5f2;
+            color: #333;
+            padding: 20px;
+            background-image: url('https://images.unsplash.com/photo-1543308743-dadf4d1b13c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGx1eHVyeXxlbnwwfHx8fDE2NzI3NjU4NjA&ixlib=rb-4.0.3&q=80&w=1080');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #7b4b94;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            font-family: 'Palatino', serif;
+        }
+
+        .question {
+            margin-bottom: 25px;
+        }
+
+        .question h3 {
+            margin-bottom: 15px;
+            color: #4b3a5a;
+            font-size: 1.25em;
+            font-weight: bold;
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+            font-size: 1.1em;
+            color: #3c3c3c;
+        }
+
+        .options label:hover {
+            color: #7b4b94;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            color: white;
+            background-color: #7b4b94;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #5a316d;
+        }
+
+        .result {
+            margin-top: 30px;
+            padding: 25px;
+            background-color: #e9e2eb;
+            border-radius: 12px;
+        }
+
+        .result h2 {
+            color: #7b4b94;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .result p {
+            margin: 12px 0;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .perfume-image {
+            width: 50px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .rainbow {
+            background: linear-gradient(90deg, rgba(255,136,0,1) 0%, rgba(255,56,0,1) 25%, rgba(255,0,119,1) 50%, rgba(0,119,255,1) 75%, rgba(0,255,213,1) 100%);
+            height: 8px;
+            border-radius: 4px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>神话人物与香水测试</h1>
+
+        <div id="quiz">
+            <div class="question">
+                <h3>1. 你更倾向于以下哪种人际关系？</h3>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A. 你喜欢帮助他人和给予关怀</label>
+                    <label><input type="radio" name="q1" value="B"> B. 你欣赏美丽和完美的人或事物</label>
+                    <label><input type="radio" name="q1" value="C"> C. 你倾向于挑战传统的性别角色</label>
+                    <label><input type="radio" name="q1" value="D"> D. 你喜欢寻求内心和谐与平衡</label>
+                    <label><input type="radio" name="q1" value="E"> E. 你希望成为一个社群中的精神导师或领袖</label>
+                    <label><input type="radio" name="q1" value="F"> F. 你在竞争和权力斗争中感到充满活力</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>2. 你如何看待性别和性取向的表达？</h3>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A. 性别和性取向是流动的，可以结合各种特质</label>
+                    <label><input type="radio" name="q2" value="B"> B. 美丽和爱情可以超越性别的界限</label>
+                    <label><input type="radio" name="q2" value="C"> C. 性别是多变的，不应该局限于一种形式</label>
+                    <label><input type="radio" name="q2" value="D"> D. 性别是两个对立面在和谐中的结合</label>
+                    <label><input type="radio" name="q2" value="E"> E. 性别与性取向应被多元化地理解和尊重</label>
+                    <label><input type="radio" name="q2" value="F"> F. 性别和性取向也可以在权力和竞争中表现出来</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>3. 你更喜欢哪种生活方式？</h3>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A. 生活中需要平衡不同的性别特质</label>
+                    <label><input type="radio" name="q3" value="B"> B. 你追求美和爱，愿意打破传统规范</label>
+                    <label><input type="radio" name="q3" value="C"> C. 你喜欢改变，灵活应对各种角色</label>
+                    <label><input type="radio" name="q3" value="D"> D. 你寻求内在的平衡和统一</label>
+                    <label><input type="radio" name="q3" value="E"> E. 你希望在社会中扮演独特的、具有影响力的角色</label>
+                    <label><input type="radio" name="q3" value="F"> F. 你倾向于在斗争和竞争中成长</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>4. 面对困境时，你的首要反应是什么？</h3>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A. 寻求融合和妥协</label>
+                    <label><input type="radio" name="q4" value="B"> B. 寻求帮助，特别是从更有力量的人或神灵处</label>
+                    <label><input type="radio" name="q4" value="C"> C. 改变策略，运用智慧或变形能力</label>
+                    <label><input type="radio" name="q4" value="D"> D. 寻求内心的平静和两极的平衡</label>
+                    <label><input type="radio" name="q4" value="E"> E. 从文化或精神传统中寻找答案</label>
+                    <label><input type="radio" name="q4" value="F"> F. 直面挑战，展示自己的力量</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>5. 如果你能选择一个神话中的能力，你会选择什么？</h3>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A. 拥有平衡阴阳的能力</label>
+                    <label><input type="radio" name="q5" value="B"> B. 拥有被众人喜爱和崇拜的魅力</label>
+                    <label><input type="radio" name="q5" value="C"> C. 拥有改变形态和性别的能力</label>
+                    <label><input type="radio" name="q5" value="D"> D. 拥有结合对立面力量的能力</label>
+                    <label><input type="radio" name="q5" value="E"> E. 拥有引导和治愈人心的精神力量</label>
+                    <label><input type="radio" name="q5" value="F"> F. 拥有操纵和控制他人的能力</label>
+                </div>
+            </div>
+
+            <button onclick="calculateResult()">提交</button>
+        </div>
+
+        <div id="result" class="result" style="display: none;">
+            <h2>测试结果</h2>
+            <p id="resultText"></p>
+            <p id="perfumeRecommendation"></p>
+            <div class="rainbow"></div>
+        </div>
+    </div>
+
+    <script>
+        function calculateResult() {
+            let scores = { A: 0, B: 0, C: 0, D: 0, E: 0, F: 0 };
+            let questions = document.querySelectorAll('.question');
+
+            questions.forEach((question, index) => {
+                let selectedOption = question.querySelector('input[type="radio"]:checked');
+                if (selectedOption) {
+                    scores[selectedOption.value]++;
+                }
+            });
+
+            let maxScore = Math.max(scores.A, scores.B, scores.C, scores.D, scores.E, scores.F);
+            let result = '';
+            let perfume = '';
+
+            if (scores.A === maxScore) {
+                result = '赫耳玛弗洛狄忒斯: 你具有包容性和协调性，追求和谐和平衡，能够融合多种性别特质。';
+                perfume = '<img src="https://via.placeholder.com/50/000000/FFFFFF/?text=L\'Heure+Bleue" class="perfume-image" alt="L\'Heure Bleue">香水推荐：Guerlain - L\'Heure Bleue。香调: 东方花香调。特质: 这款经典香水带有温暖的香草与粉质香调，象征着赫耳玛弗洛狄忒斯的融合特质。它的柔和与深沉结合，展现出两性特质的和谐平衡。';
+            } else if (scores.B === maxScore) {
+                result = '伽倪墨得斯: 你有着美的追求，愿意为了爱情或美丽的理想而打破传统。';
+                perfume = '<img src="https://via.placeholder.com/50/000000/FFFFFF/?text=Shalimar" class="perfume-image" alt="Shalimar">香水推荐：Guerlain - Shalimar。香调: 东方香调。特质: Shalimar的奢华和性感气息反映了伽倪墨得斯的美丽和吸引力。这款香水具有持久的魅力和高贵的气质，象征着伽倪墨得斯在众神中的重要地位。';
+            } else if (scores.C === maxScore) {
+                result = '洛基: 你具有变通和适应性，喜欢挑战和突破传统性别的限制。';
+                perfume = '<img src="https://via.placeholder.com/50/000000/FFFFFF/?text=Habit+Rouge" class="perfume-image" alt="Habit Rouge">香水推荐：Guerlain - Habit Rouge。香调: 东方木质调。特质: Habit Rouge以其复杂而多变的香调体现了洛基的多面性。它的辛辣与甜美交替，正如洛基在神话中灵活转换的身份。';
+            } else if (scores.D === maxScore) {
+                result = '阿尔达那里湿婆: 你追求内心的平衡与和谐，重视阴阳两极的统一。';
+                perfume = '<img src="https://via.placeholder.com/50/000000/FFFFFF/?text=Samsara" class="perfume-image" alt="Samsara">香水推荐：Guerlain - Samsara。香调: 东方木质花香调。特质: Samsara结合了温暖的檀香和柔和的花香，象征着阿尔达那里湿婆的两性合一。它传递了内在和谐与平衡的深刻意义。';
+            } else if (scores.E === maxScore) {
+                result = 'Two-Spirit: 你具有独特的视角和精神力量，能够在社区中扮演重要角色，代表着多样性与包容性。';
+                perfume = '<img src="https://via.placeholder.com/50/000000/FFFFFF/?text=Herba+Fresca" class="perfume-image" alt="Herba Fresca">香水推荐：Guerlain - Aqua Allegoria Herba Fresca。香调: 绿香调。特质: Herba Fresca带有清新自然的气息，象征着Two-Spirit的自由和自然的灵性。这款香水的绿香调传达了Two-Spirit在文化中的独特地位和联系自然的能力。';
+            } else if (scores.F === maxScore) {
+                result = '塞特: 你在竞争和权力斗争中感到活力，拥有强烈的掌控欲和胜负心。';
+                perfume = '<img src="https://via.placeholder.com/50/000000/FFFFFF/?text=Vetiver" class="perfume-image" alt="Vetiver">香水推荐：Guerlain - Vetiver。香调: 木质香调。特质: Vetiver的强烈木质香调体现了塞特的权力与力量感。它的深邃和稳重反映了塞特在神话中作为挑战者的角色。';
+            }
+
+            document.getElementById('resultText').innerHTML = result;
+            document.getElementById('perfumeRecommendation').innerHTML = perfume;
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
